@@ -1,0 +1,30 @@
+{
+  "name": "mix8872/yii2-menu",
+  "version": "1.0.0",
+  "description": "Yii2 menu module",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "mix8872",
+      "email": "mix8872@yandex.ru"
+    }
+  ],
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1.0",
+    "ext-mbstring": "*",
+    "ext-intl": "*",
+	"yiisoft/yii2-bootstrap4": "^2.0",
+	"yiisoft/yii2-jui": "~2.0",
+	"paulzi/yii2-nested-sets" : "^1.0",
+    "rmrevin/yii2-fontawesome": "~3.5",
+    "bower-asset/jquery-toast-plugin": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "mix8872\\menu\\": "src"
+    }
+  }
+}

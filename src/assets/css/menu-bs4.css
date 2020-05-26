@@ -1,0 +1,42 @@
+.sortable {
+	padding: 2px;
+	margin: 2px 0;
+	width: 75%;
+}
+.sortable li ol {
+	width: 100%;
+	padding-left: 0;
+	margin-left: 30px;
+}
+.sortable .item {
+	margin: 5px 0;
+	cursor: move;
+	padding: 3px;
+	border: 1px solid;
+	border-radius: 4px;
+}
+.sortable .item:hover {
+	box-shadow: #9a9a9a 0 0 5px;
+}
+.item .more,
+.item .delete {
+	cursor: pointer;
+}
+.sortable .item a {
+	text-decoration: none;
+	color: #6c757d;
+}
+.sortable .item .delete:hover {
+	color: #f1556c;
+}
+.sortable .sortable {
+	margin: 10px 0 0 20px;
+}
+.sortable .placeholder {
+	width: 100%;
+	height: 30px;
+	border: 1px dashed #555;
+}
+.sortable li {
+	list-style: none;
+}
