@@ -74,18 +74,19 @@ use yii\helpers\Url;
 					$parentLinkAttr = $linkAttr;
 					$tag = 'span';
 				}
+                $arrowDown = '<div class="arrow-down"></div>';
                 ?>
                 <li <?= !empty($liClass) ? "class='$liClass'" : '' ?>>
                     <?php if ($item['icon_class']) {
                         $icon = '<i class="' . $item['icon_class'] . '"></i>';
-                        $link = Html::tag($tag, $icon . Html::tag('span', $item['name']), $parentLinkAttr);
+                        $link = Html::tag($tag, $icon . Html::tag('span', $item['name']) . $arrowDown, $parentLinkAttr);
                         if (is_callable($linkTemplate)) {
                             $link = $linkTemplate($item, $itemLink, $linkAttr);
                         } elseif (is_string($linkTemplate)) {
                             $link = str_replace('{link}', $link, $linkTemplate);
                         }
                     } else {
-                        $link = Html::tag($tag, $item['name'], $parentLinkAttr);
+                        $link = Html::tag($tag, $item['name'] . $arrowDown, $parentLinkAttr);
                         if (is_callable($linkTemplate)) {
                             $link = $linkTemplate($item, $itemLink, $linkAttr);
                         } elseif (is_string($linkTemplate)) {
