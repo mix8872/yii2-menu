@@ -41,7 +41,7 @@ use yii\helpers\Url;
                     <?php if ($item['icon_class']) {
                         $icon = '<i class="' . $item['icon_class'] . '"></i>';
 
-                        $link = Html::a($icon . Html::tag('span', $item['name']), $itemLink, $linkAttr);
+                        $link = Html::a("{$icon} " . Html::tag('span', $item['name']), $itemLink, $linkAttr);
                         if (is_callable($linkTemplate)) {
                             $link = $linkTemplate($item['name'], $itemLink, $linkAttr, $icon);
                         } elseif (is_string($linkTemplate)) {
@@ -79,7 +79,7 @@ use yii\helpers\Url;
                 <li <?= !empty($liClass) ? "class='$liClass'" : '' ?>>
                     <?php if ($item['icon_class']) {
                         $icon = '<i class="' . $item['icon_class'] . '"></i>';
-                        $link = Html::tag($tag, $icon . Html::tag('span', $item['name']) . $arrowDown, $parentLinkAttr);
+                        $link = Html::tag($tag, "{$icon} " . Html::tag('span', $item['name']) . $arrowDown, $parentLinkAttr);
                         if (is_callable($linkTemplate)) {
                             $link = $linkTemplate($item, $itemLink, $linkAttr);
                         } elseif (is_string($linkTemplate)) {
