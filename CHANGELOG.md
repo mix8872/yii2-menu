@@ -1,5 +1,9 @@
 # Changelog
 
+##1.1.0
+
+Add item title template
+
 ##1.0.2
 
 Fix space after menu icon

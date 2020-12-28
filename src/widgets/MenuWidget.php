@@ -106,6 +106,11 @@ class MenuWidget extends \yii\widgets\Menu
      */
     public $linkTemplate = '{link}';
     /**
+     * Template title of all item 'a' elements
+     * @var string
+     */
+    public $linkTitleTemplate = '{title}';
+    /**
      * If true then current url will be excluded from menu, default false
      * @var bool
      */
@@ -185,7 +190,8 @@ class MenuWidget extends \yii\widgets\Menu
             'parentTemplate' => $this->parentTemplate,
             'submenuWrapperTag' => $this->submenuWrapperTag,
             'submenuWrapperClassName' => $this->submenuWrapperClassName,
-            'linkTemplate' => $this->linkTemplate
+            'linkTemplate' => $this->linkTemplate,
+            'linkTitleTemplate' => $this->linkTitleTemplate
         ]);
     }
 
@@ -209,6 +215,7 @@ class MenuWidget extends \yii\widgets\Menu
             'description' => $this->description,
             'activeClassName' => $this->activeClassName,
             'parentClassName' => $this->parentClassName,
+            'linkTitleTemplate' => $this->linkTitleTemplate,
             'prev' => $prev,
             'next' => $next,
         ]);

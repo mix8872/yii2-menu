@@ -225,6 +225,12 @@ public $parentTemplate = '{link}';
 public $linkTemplate = '{link}';
 
 /**
+ * Template title of all item 'a' elements
+ * @var string
+ */
+public $linkTitleTemplate = '{url}';
+
+/**
  * If true then current url will be excluded from menu, default false
  * @var bool
  */

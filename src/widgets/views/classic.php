@@ -35,6 +35,12 @@ use yii\helpers\Url;
                 echo str_repeat('</ul></li>', $step);
             }
 			$itemLink = strpos($item['url'], '//') !== false ? $item['url'] : [$item['url']];
+            $itemTitle = $item['name'];
+            if (is_callable($linkTitleTemplate)) {
+                $itemTitle = $linkTitleTemplate($item['name'], $itemLink, $linkAttr);
+            } elseif (is_string($linkTitleTemplate)) {
+                $itemTitle = str_replace('{title}', $itemTitle, $linkTitleTemplate);
+            }
 
             if ($item['rgt'] - $item['lft'] === 1):  // if not parent?>
                 <li <?= !empty($liClass) ? "class='$liClass'" : '' ?>>
