@@ -1,5 +1,9 @@
 # Changelog
 
+##1.1.1
+
+Fix Item title template
+
 ##1.1.0
 
 Add item title template

@@ -47,16 +47,16 @@ use yii\helpers\Url;
                     <?php if ($item['icon_class']) {
                         $icon = '<i class="' . $item['icon_class'] . '"></i>';
 
-                        $link = Html::a("{$icon} " . Html::tag('span', $item['name']), $itemLink, $linkAttr);
+                        $link = Html::a("{$icon} " . Html::tag('span', $itemTitle), $itemLink, $linkAttr);
                         if (is_callable($linkTemplate)) {
-                            $link = $linkTemplate($item['name'], $itemLink, $linkAttr, $icon);
+                            $link = $linkTemplate($itemTitle, $itemLink, $linkAttr, $icon);
                         } elseif (is_string($linkTemplate)) {
                             $link = str_replace('{link}', $link, $linkTemplate);
                         }
                     } else {
-                        $link = Html::a($item['name'], $itemLink, $linkAttr);
+                        $link = Html::a($itemTitle, $itemLink, $linkAttr);
                         if (is_callable($linkTemplate)) {
-                            $link = $linkTemplate($item['name'], $itemLink, $linkAttr);
+                            $link = $linkTemplate($itemTitle, $itemLink, $linkAttr);
                         } elseif (is_string($linkTemplate)) {
                             $link = str_replace('{link}', $link, $linkTemplate);
                         }
