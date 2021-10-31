@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model mix8872\admin\models\Menu */
+/* @var $model mix8872\menu\models\Menu */
 
 $this->title = Yii::t('menu', 'Редактирование меню: ') . $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('menu', 'Меню'), 'url' => ['index']];

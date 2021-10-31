@@ -1,4 +1,7 @@
 # Changelog
+##1.1.2
+
+Bugfix
 
 ##1.1.1
 

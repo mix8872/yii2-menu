@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 use voskobovich\tree\manager\widgets\nestable\Nestable;
 
 /* @var $this yii\web\View */
-/* @var $model mix8872\admin\models\Menu */
+/* @var $model mix8872\menu\models\Menu */
 /* @var $form yii\widgets\ActiveForm */
 
 \mix8872\menu\assets\JsAsset::register($this);
